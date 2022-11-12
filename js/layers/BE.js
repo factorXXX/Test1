@@ -280,6 +280,7 @@ function BE_orehealth(){
   return n(10).times(n(1.25).pow(player.be.depth.sub(1).pow(1.02))).times(mult)
 }
 function BE_power(){
+    if(!hasUpgrade('be',11))return n(0)
   let power=n(1)
   power=power.add(tmp.be.buyables[1001].effect)
   power=power.times(tmp.be.buyables[1002].effect)
